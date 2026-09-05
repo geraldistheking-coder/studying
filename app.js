@@ -107,12 +107,12 @@ function render() {
     card.className = "game-card";
     card.style.setProperty("--accent", game.accent);
     card.innerHTML = `
+      <strong class="game-title">${escapeHtml(game.title)}</strong>
       <span class="thumb-wrap">
         <img src="${game.image}" alt="" loading="lazy" data-fallback="${game.fallbackImage}">
         <span class="thumb-fallback">${escapeHtml(game.title)}</span>
       </span>
-      <strong>${escapeHtml(game.title)}</strong>
-      <span>${escapeHtml(game.category)}</span>
+      <span class="game-category">${escapeHtml(game.category)}</span>
     `;
     const image = card.querySelector("img");
     image.addEventListener("error", () => {
