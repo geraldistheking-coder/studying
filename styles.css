@@ -256,22 +256,7 @@ button.active {
 }
 
 .game-card::after {
-  content: "";
-  position: absolute;
-  inset: -15%;
-  z-index: 0;
-  opacity: 0;
- background:
-  radial-gradient(
-    circle at center,
-    rgba(24, 255, 34, 0.65) 0%,
-    rgba(24, 255, 34, 0.30) 25%,
-    rgba(24, 255, 34, 0.10) 45%,
-    transparent 60%
-  );
-  filter: blur(20px);
-  transition: opacity 240ms ease, transform 240ms ease;
-  transform: scale(0.65);
+  display: none;
 }
 
 .game-card .game-category {
@@ -297,11 +282,6 @@ button.active {
   border-color: transparent;
   box-shadow: none;
   transform: translateY(-6px) scale(1.025);
-}
-
-.game-card:hover::after {
-  opacity: 1;
-  transform: scale(1);
 }
 
 .game-card:active {
