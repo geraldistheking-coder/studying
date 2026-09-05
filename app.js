@@ -1,7 +1,20 @@
 const gameCdnBase = "https://gl.githack.com/3kh0/3kh0-assets/raw/main/";
-const imageBase = "https://gitlab.com/3kh0/3kh0-assets/-/raw/main/";
 const friendBase = "https://geodmeeee.github.io/forksnspoons/";
-const colors = ["#55f0b2", "#ffd166", "#77d5ff", "#ff665c"];
+const categoryColors = {
+  Action: "#e85d75",
+  Adventure: "#2a9d8f",
+  Arcade: "#f4a261",
+  Board: "#8e7dff",
+  Clicker: "#ec6ead",
+  Platform: "#3da5d9",
+  Puzzle: "#f6c945",
+  Racing: "#ff6b35",
+  Sim: "#4cc9a4",
+  Sports: "#457bff",
+  Story: "#b979df",
+  Strategy: "#22a6b3",
+  Word: "#c49a4a"
+};
 
 const games = [
   ["2048", "2048", "Puzzle"],
@@ -41,15 +54,13 @@ const games = [
   ["Portal Flash", "portalflash", "Puzzle"],
   ["Riddle School", "riddleschool", "Story"],
   ["Wordle", "wordle", "Word"],
-].map(([title, slug, imageOrCategory, category, source], index) => ({
+].map(([title, slug, imageOrCategory, category, source]) => ({
   title,
   slug,
   category: source === "friend" ? category : imageOrCategory,
   source: source || "3kh0",
   url: source === "friend" ? `${friendBase}${encodePath(slug)}` : `${gameCdnBase}${encodePath(slug)}/index.html`,
-  image: source === "friend" ? `${friendBase}${encodePath(imageOrCategory)}` : `${imageBase}${encodePath(slug)}/thumb.png`,
-  fallbackImage: source === "friend" ? `${friendBase}${encodePath(imageOrCategory)}` : `${imageBase}${encodePath(slug)}/${encodeURIComponent(slug.split("/").pop())}.png`,
-  accent: colors[index % colors.length]
+  accent: categoryColors[source === "friend" ? category : imageOrCategory] || "#77d5ff"
 }));
 
 const grid = document.querySelector("#gameGrid");
@@ -107,22 +118,11 @@ function render() {
     card.className = "game-card";
     card.style.setProperty("--accent", game.accent);
     card.innerHTML = `
-      <strong class="game-title">${escapeHtml(game.title)}</strong>
       <span class="thumb-wrap">
-        <img src="${game.image}" alt="" loading="lazy" data-fallback="${game.fallbackImage}">
         <span class="thumb-fallback">${escapeHtml(game.title)}</span>
       </span>
       <span class="game-category">${escapeHtml(game.category)}</span>
     `;
-    const image = card.querySelector("img");
-    image.addEventListener("error", () => {
-      if (!image.dataset.triedFallback) {
-        image.dataset.triedFallback = "true";
-        image.src = image.dataset.fallback;
-      } else {
-        image.hidden = true;
-      }
-    });
     card.addEventListener("click", () => openGame(game));
     grid.append(card);
   });
