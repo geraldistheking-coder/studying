@@ -110,7 +110,7 @@ function render() {
   const visible = filteredGames();
   grid.innerHTML = "";
   resultTitle.textContent = activeCategory === "All" ? "All assignments" : activeCategory;
-  resultCount.textContent = `${visible.length} ${visible.length === 1 ? "class" : "classes"}`;
+  resultCount.textContent = `${visible.length} ${visible.length === 1 ? "assignment" : "assignments"}`;
 
   visible.forEach((game) => {
     const card = document.createElement("button");
