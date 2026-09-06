@@ -1,10 +1,11 @@
+```html
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Classes</title>
-  <link rel="icon" type="image/png" href="assets/favicon3.png">
+
+  <title>Class Resources</title>
 
   <style>
     * {
@@ -13,84 +14,86 @@
 
     body {
       margin: 0;
-      min-height: 100vh;
       font-family: Arial, sans-serif;
-      background: #eef2f5;
+      background: #f3f5f7;
       color: #263238;
     }
 
     header {
-      background: white;
-      border-bottom: 1px solid #d8dde1;
-      padding: 18px 30px;
+      background: #ffffff;
+      border-bottom: 1px solid #dfe3e6;
+      padding: 20px 30px;
     }
 
     header h1 {
       margin: 0;
       font-size: 24px;
-      font-weight: 600;
     }
 
     .container {
       max-width: 1000px;
-      margin: 35px auto;
+      margin: 40px auto;
       padding: 0 20px;
     }
 
-    .welcome {
-      margin-bottom: 25px;
+    .intro {
+      margin-bottom: 30px;
     }
 
-    .welcome h2 {
+    .intro h2 {
       margin: 0 0 8px;
-      font-size: 28px;
+      font-size: 30px;
     }
 
-    .welcome p {
+    .intro p {
       margin: 0;
-      color: #65727a;
+      color: #6c777d;
     }
 
-    .classes {
+    .links {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
+      gap: 16px;
     }
 
-    .class-card {
+    .link-card {
+      display: block;
       background: white;
-      border: 1px solid #dce1e4;
+      border: 1px solid #dfe3e6;
       border-radius: 10px;
       padding: 22px;
-      min-height: 130px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+      text-decoration: none;
+      color: #263238;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
     }
 
-    .class-card h3 {
-      margin: 0 0 10px;
+    .link-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    }
+
+    .link-number {
+      font-size: 12px;
+      color: #89939a;
+      margin-bottom: 8px;
+    }
+
+    .link-card h3 {
+      margin: 0 0 7px;
       font-size: 18px;
     }
 
-    .class-card p {
+    .link-card p {
       margin: 0;
-      color: #78848b;
+      color: #737e84;
       font-size: 14px;
     }
 
-    .status {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 5px 9px;
-      border-radius: 5px;
-      background: #edf1f3;
-      color: #66727a;
-      font-size: 12px;
-    }
-
-    #message {
-      margin-top: 20px;
-      color: #65727a;
-      font-size: 14px;
+    footer {
+      text-align: center;
+      margin: 40px 0 25px;
+      color: #929ba0;
+      font-size: 13px;
     }
   </style>
 </head>
@@ -98,45 +101,93 @@
 <body>
 
   <header>
-    <h1>Class Dashboard</h1>
+    <h1>Class Resources</h1>
   </header>
 
   <main class="container">
 
-    <div class="welcome">
-      <h2>My Classes</h2>
-      <p>View your classes and current assignments.</p>
+    <div class="intro">
+      <h2>School Resources</h2>
+      <p>Quick links to commonly used school websites.</p>
     </div>
 
-    <div class="classes">
+    <div class="links">
 
-      <div class="class-card">
-        <h3>Mathematics</h3>
-        <p>Current assignments and class materials.</p>
-        <span class="status">Active</span>
-      </div>
+      <!-- LINK 1 -->
+      <a class="link-card" href="https://4j.lane.edu/canvas" target="_blank">
+        <div class="link-number">01</div>
+        <h3>Canvas</h3>
+        <p>Access 4j Canvas.</p>
+      </a>
 
-      <div class="class-card">
-        <h3>Science</h3>
-        <p>Current assignments and class materials.</p>
-        <span class="status">Active</span>
-      </div>
+      <!-- LINK 2 -->
+      <a class="link-card" href="https://www.google.com/calendar/hosted/4j.lane.edu" target="_blank">
+        <div class="link-number">02</div>
+        <h3>Google Classroom</h3>
+        <p>View classes and assignments.</p>
+      </a>
 
-      <div class="class-card">
-        <h3>English</h3>
-        <p>Current assignments and class materials.</p>
-        <span class="status">Active</span>
-      </div>
+      <!-- LINK 3 -->
+      <a class="link-card" href="https://workspace.google.com/products/drive/" target="_blank">
+        <div class="link-number">03</div>
+        <h3>Google Drive</h3>
+        <p>Access school files.</p>
+      </a>
 
-      <div class="class-card">
-        <h3>History</h3>
-        <p>Current assignments and class materials.</p>
-        <span class="status">Active</span>
-      </div>
+      <!-- LINK 4 -->
+      <a class="link-card" href="docs.google.com" target="_blank">
+        <div class="link-number">04</div>
+        <h3>Google Docs</h3>
+        <p>Access Google Docs.</p>
+      </a>
+
+      <!-- LINK 5 -->
+      <a class="link-card" href="https://workspace.google.com/products/slides/" target="_blank">
+        <div class="link-number">05</div>
+        <h3>Google Slides</h3>
+        <p>Access Google Slides.</p>
+      </a>
+
+      <!-- LINK 6 -->
+      <a class="link-card" href="https://www.google.com/calendar/hosted/4j.lane.edu" target="_blank">
+        <div class="link-number">06</div>
+        <h3>Google Calendar</h3>
+        <p>Access Google Calendar.</p>
+      </a>
+
+      <!-- LINK 7 -->
+      <a class="link-card" href="https://mail.google.com/a/4j.lane.edu" target="_blank">
+        <div class="link-number">07</div>
+        <h3>Google Mail</h3>
+        <p>Access Gmail.</p>
+      </a>
+
+      <!-- LINK 8 -->
+      <a class="link-card" href="https://or-eug-psv.edupoint.com/PXP2_Login_Student.aspx" target="_blank">
+        <div class="link-number">08</div>
+        <h3>StudentVUE</h3>
+        <p>Access StudentVUE.</p>
+      </a>
+
+      <!-- LINK 9 -->
+      <a class="link-card" href="https://app.myflexlearning.com/login" target="_blank">
+        <div class="link-number">09</div>
+        <h3>Flex</h3>
+        <p>Access to myflexlearning.com.</p>
+      </a>
+
+      <!-- LINK 10 -->
+      <a class="link-card" href="https://neal.fun" target="_blank">
+        <div class="link-number">10</div>
+        <h3>Good Brain Websites</h3>
+        <p>Currently only a link to Neal.fun</p>
+      </a>
 
     </div>
 
-    <p id="message">Loading class information...</p>
+    <footer>
+      Class Resources
+    </footer>
 
   </main>
 
@@ -162,3 +213,4 @@
 
 </body>
 </html>
+```
