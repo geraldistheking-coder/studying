@@ -4,7 +4,6 @@ const categoryColors = {
   Action: "#e85d75",
   Adventure: "#2a9d8f",
   Arcade: "#f4a261",
-  Board: "#013220",
   Clicker: "#ec6ead",
   Horror: "#013220",
   Platform: "#3da5d9",
