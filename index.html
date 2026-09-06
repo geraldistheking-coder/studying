@@ -1,4 +1,9 @@
 <!doctype html>
+<script>
+  if (sessionStorage.getItem("siteUnlocked") !== "true") {
+    window.location.replace("class.html");
+  }
+</script>
 <html lang="en">
   <head>
     <meta charset="utf-8">
