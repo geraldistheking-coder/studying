@@ -37,6 +37,7 @@ const games = [
   ["Cookie Clicker", "cookie-clicker", "Clicker"],
   ["Core Ball", "core-ball", "Arcade"],
   ["Creative Kill Chamber", "creativekillchamber", "Action"],
+  ["Crossy Road", "games/crossyroad/index.html" "Platform", null, "local"],
   ["CSGO Clicker", "csgo-clicker", "Clicker"],
   ["Cupcake 2048", "cupcake2048", "Puzzle"],
   ["Duck Life 3", "ducklife3", "Sim"],
