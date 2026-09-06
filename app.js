@@ -42,7 +42,7 @@ const games = [
   ["Duck Life 3", "ducklife3", "Sim"],
   ["Jeffery Epsteins Basics in Education and Kidnapping", "games/epsteinkidnap/index.html", "Sim", null, "local"],
   ["Fancy Pants Adventures", "fancypantsadventures", "Platform"],
-  ["Five Nights At Shreks", "games/fnas/index.html", "Horror", null, "local"]
+  ["Five Nights At Shreks", "games/fnas/index.html", "Horror", null, "local"],
   ["Fleeing the Complex", "fleeingthecomplex", "Story"],
   ["Impossible Quiz", "impossiblequiz", "Puzzle"],
   ["Learn to Fly", "learntofly", "Arcade"],
