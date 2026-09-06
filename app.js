@@ -17,7 +17,7 @@ const categoryColors = {
 };
 
 const games = [
-  ["10 Minutes Till Dawn", "games/10minutes till dawn/index.html", "Action", null, "local"],
+  ["10 Minutes Till Dawn", "games/10minutes-till-dawn/index.html", "Action", null, "local"],
   ["2048", "2048", "Puzzle"],
   ["2048 Multitask", "2048-multitask", "Puzzle"],
   ["Achievement Unlocked", "achievementunlocked", "Platform"],
