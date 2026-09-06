@@ -25,6 +25,7 @@ const games = [
   ["A Dark Room", "adarkroom", "Strategy"],
   ["Alien Hominid", "alienhominid", "Action"],
   ["Align 4", "align-4", "Strategy"],
+  ["Among Us", "games/amongus/index.html", "Strategy", null, "local"],
   ["Avalanche", "avalanche", "Arcade"],
   ["Black Knight", "blackknight", "Action"],
   ["Bloons TD", "bloonstd", "Strategy"],
