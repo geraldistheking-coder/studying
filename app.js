@@ -17,7 +17,7 @@ const categoryColors = {
 };
 
 const games = [
-  ["10 Minutes Till Dawn", "https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@main/10minutestilldawn/index.html", "Action", "UGS"],
+  ["10 Minutes Till Dawn", "games/10minutes-till-dawn/index.html", "Action", null, "local"],
   ["2048", "2048", "Puzzle"],
   ["2048 Multitask", "2048-multitask", "Puzzle"],
   ["Achievement Unlocked", "achievementunlocked", "Platform"],
@@ -49,17 +49,21 @@ const games = [
   ["Riddle School", "riddleschool", "Story"],
   ["Wordle", "wordle", "Word"],
 ].map(([title, slug, imageOrCategory, category, source]) => {
-  const isExternal = source === "external";
+  const isLocal = source === "local";
 
   return {
     title,
     slug,
-    category: isExternal ? imageOrCategory : (category || imageOrCategory),
-    source: isExternal ? "UGS" : (source || "3kh0"),
-    url: isExternal
+    category: isLocal ? imageOrCategory : (source === "friend" ? category : imageOrCategory),
+    source: isLocal ? "UGS" : (source || "3kh0"),
+    url: isLocal
       ? slug
-      : `${gameCdnBase}${encodePath(slug)}/index.html`,
-    accent: categoryColors[isExternal ? imageOrCategory : (category || imageOrCategory)] || "#77d5ff"
+      : source === "friend"
+        ? `${friendBase}${encodePath(slug)}`
+        : `${gameCdnBase}${encodePath(slug)}/index.html`,
+    accent: categoryColors[
+      isLocal ? imageOrCategory : (source === "friend" ? category : imageOrCategory)
+    ] || "#77d5ff"
   };
 });
 const grid = document.querySelector("#gameGrid");
