@@ -39,6 +39,7 @@ const games = [
   ["CSGO Clicker", "csgo-clicker", "Clicker"],
   ["Cupcake 2048", "cupcake2048", "Puzzle"],
   ["Duck Life 3", "ducklife3", "Sim"],
+  ["Geometry Dash", "games/geodash/index.html", "Action", null, "local"],
   ["Jeffery Epsteins Basics in Education and Kidnapping", "games/epsteinkidnap/index.html", "Sim", null, "local"],
   ["Fancy Pants Adventures", "fancypantsadventures", "Platform"],
   ["Fleeing the Complex", "fleeingthecomplex", "Story"],
