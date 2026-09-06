@@ -80,7 +80,7 @@ button.active {
   justify-content: space-between;
   gap: 1rem;
   padding: 0.85rem clamp(1rem, 3vw, 2rem);
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0);
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(18px);
 }
