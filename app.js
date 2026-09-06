@@ -214,5 +214,5 @@ fullscreenButton.addEventListener("click", () => {
   if (frame.requestFullscreen) frame.requestFullscreen();
 });
 
-startClouds();
+startFog();
 render();
