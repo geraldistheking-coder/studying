@@ -145,6 +145,10 @@ button.active {
 .sidebar .search-box {
   color: white;
 }
+.eyebrow,
+.count {
+  color: white;
+}
 .intro h1 {
   margin: 0;
   font-size: clamp(2.4rem, 5vw, 4.7rem);
@@ -154,7 +158,7 @@ button.active {
 
 .intro p,
 .credits span {
-  color: var(--muted);
+  color: white;
   line-height: 1.6;
 }
 
@@ -208,9 +212,14 @@ button.active {
   display: grid;
   gap: 0.35rem;
   padding: 0.9rem;
-  background: rgba(255, 255, 255, 0.7);
-  border: 1px solid var(--line);
+  color: white;
+  background: rgba(0, 0, 0, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 0.5rem;
+}
+
+.credits span {
+  color: white;
 }
 
 .content {
@@ -239,7 +248,7 @@ button.active {
 
 .count {
   margin: 0;
-  color: var(--ink);
+  color: white;
   font-weight: 1000;
 }
 
