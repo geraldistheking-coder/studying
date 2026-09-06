@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Classes</title>
+  <link rel="icon" type="image/png" href="assets/favicon3.png">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      background: #eef2f5;
+      color: #263238;
+    }
+
+    header {
+      background: white;
+      border-bottom: 1px solid #d8dde1;
+      padding: 18px 30px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 35px auto;
+      padding: 0 20px;
+    }
+
+    .welcome {
+      margin-bottom: 25px;
+    }
+
+    .welcome h2 {
+      margin: 0 0 8px;
+      font-size: 28px;
+    }
+
+    .welcome p {
+      margin: 0;
+      color: #65727a;
+    }
+
+    .classes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+
+    .class-card {
+      background: white;
+      border: 1px solid #dce1e4;
+      border-radius: 10px;
+      padding: 22px;
+      min-height: 130px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    }
+
+    .class-card h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+    }
+
+    .class-card p {
+      margin: 0;
+      color: #78848b;
+      font-size: 14px;
+    }
+
+    .status {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 5px 9px;
+      border-radius: 5px;
+      background: #edf1f3;
+      color: #66727a;
+      font-size: 12px;
+    }
+
+    #message {
+      margin-top: 20px;
+      color: #65727a;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Class Dashboard</h1>
+  </header>
+
+  <main class="container">
+
+    <div class="welcome">
+      <h2>My Classes</h2>
+      <p>View your classes and current assignments.</p>
+    </div>
+
+    <div class="classes">
+
+      <div class="class-card">
+        <h3>Mathematics</h3>
+        <p>Current assignments and class materials.</p>
+        <span class="status">Active</span>
+      </div>
+
+      <div class="class-card">
+        <h3>Science</h3>
+        <p>Current assignments and class materials.</p>
+        <span class="status">Active</span>
+      </div>
+
+      <div class="class-card">
+        <h3>English</h3>
+        <p>Current assignments and class materials.</p>
+        <span class="status">Active</span>
+      </div>
+
+      <div class="class-card">
+        <h3>History</h3>
+        <p>Current assignments and class materials.</p>
+        <span class="status">Active</span>
+      </div>
+
+    </div>
+
+    <p id="message">Loading class information...</p>
+
+  </main>
+
+  <script>
+    const secret = "pleaseletmein";
+    let typed = "";
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key.length !== 1) return;
+
+      typed += event.key.toLowerCase();
+
+      if (!secret.startsWith(typed)) {
+        typed = event.key.toLowerCase();
+      }
+
+      if (typed === secret) {
+        sessionStorage.setItem("siteUnlocked", "true");
+        window.location.replace("index.html");
+      }
+    });
+  </script>
+
+</body>
+</html>
