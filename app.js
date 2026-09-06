@@ -4,8 +4,9 @@ const categoryColors = {
   Action: "#e85d75",
   Adventure: "#2a9d8f",
   Arcade: "#f4a261",
-  Board: "#8e7dff",
+  Board: "#013220",
   Clicker: "#ec6ead",
+  Horror: "#013220",
   Platform: "#3da5d9",
   Puzzle: "#f6c945",
   Racing: "#ff6b35",
@@ -41,6 +42,7 @@ const games = [
   ["Duck Life 3", "ducklife3", "Sim"],
   ["Jeffery Epsteins Basics in Education and Kidnapping", "games/epsteinkidnap/index.html", "Sim", null, "local"],
   ["Fancy Pants Adventures", "fancypantsadventures", "Platform"],
+  ["Five Nights At Shreks", "games/fnas/index.html", "Horror", null, "local"]
   ["Fleeing the Complex", "fleeingthecomplex", "Story"],
   ["Impossible Quiz", "impossiblequiz", "Puzzle"],
   ["Learn to Fly", "learntofly", "Arcade"],
