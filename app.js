@@ -13,7 +13,7 @@ const categoryColors = {
   Sports: "#457bff",
   Story: "#b979df",
   Strategy: "#22a6b3",
-  Word: "#c49a4a"
+  Luck: "#c49a4a"
 };
 
 const games = [
@@ -56,11 +56,12 @@ const games = [
   ["Minesweeper", "minesweeper", "Puzzle"],
   ["Papa's Pizzeria", "papaspizzaria", "Sim"],
   ["Paper.io 2", "paperio2", "Arcade"],
+  ["Plinko", "games/plinko/index.html", "Luck", null, "local"],
   ["Portal Flash", "portalflash", "Puzzle"],
   ["Riddle School", "riddleschool", "Story"],
   ["Saul Goodman Run", "games/saul-goodman-run/index.html", "Racing", null, "local"],
   ["Shift At Midnight", "games/shift-at-midnight/index.html", "Horror", null, "local"],
-  ["Wordle", "wordle", "Word"],
+  ["Wordle", "wordle", "Strategy"],
 ].map(([title, slug, imageOrCategory, category, source]) => {
   const isLocal = source === "local";
 
