@@ -168,11 +168,16 @@ button.active {
 .search-box input {
   width: 100%;
   padding: 0.8rem 0.9rem;
-  color: var(--ink);
-  background: rgba(255, 255, 255, 0.82);
-  border: 1px solid var(--line);
+  color: white;
+  background: rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 0.45rem;
   outline: none;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+.search-box input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .search-box input:focus {
@@ -207,9 +212,11 @@ button.active {
   gap: 1rem;
   margin-bottom: 1rem;
   padding: 1rem;
-  background: rgba(255, 255, 255, 0.62);
-  border: 1px solid var(--line);
+  background: rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 0.55rem;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
 }
 
 .toolbar h2,
