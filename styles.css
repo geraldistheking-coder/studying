@@ -164,7 +164,7 @@ button.active {
 
 .eyebrow {
   margin: 0 0 0.5rem;
-  color: var(--ink);
+  color: white;
   font-size: 0.76rem;
   font-weight: 1000;
   letter-spacing: 0.12em;
