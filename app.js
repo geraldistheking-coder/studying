@@ -56,6 +56,7 @@ const games = [
   ["Paper.io 2", "paperio2", "Arcade"],
   ["Portal Flash", "portalflash", "Puzzle"],
   ["Riddle School", "riddleschool", "Story"],
+  ["Shift At Midnight", "games/shift-at-midnight/index.html", "Horror", null, "local"],
   ["Wordle", "wordle", "Word"],
 ].map(([title, slug, imageOrCategory, category, source]) => {
   const isLocal = source === "local";
