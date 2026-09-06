@@ -131,9 +131,11 @@ button.active {
   max-height: calc(100vh - 6rem);
   overflow: auto;
   padding: 1rem;
-  background: rgba(255, 255, 255, 0.72);
-  border: 1px solid var(--line);
+  background: rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 0.55rem;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
 }
 
 .intro h1 {
