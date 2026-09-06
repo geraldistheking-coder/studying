@@ -185,25 +185,23 @@ function encodePath(path) {
 }
 
 
-function startClouds() {
-  if (!window.VANTA?.CLOUDS) return;
-  window.VANTA.CLOUDS({
-    el: "#cloudBackground",
+function startFog() {
+  if (!window.VANTA?.FOG) return;
+
+  window.VANTA.FOG({
+    el: "#vanta-bg",
     mouseControls: true,
     touchControls: true,
     gyroControls: false,
-    minHeight: 200,
-    minWidth: 200,
-    skyColor: 0x0f1764,
-    cloudColor: 0xadd9de,
-    cloudShadowColor: 0x183050,
-    sunColor: 0xff8f19,
-    sunGlareColor: 0xff6c33,
-    sunlightColor: 0xffad53,
-    speed: 1,
-    scale: 3,
-    scaleMobile: 12,
-    backgroundAlpha: 1
+    minHeight: 200.00,
+    minWidth: 200.00,
+    highlightColor: 0xffce,
+    midtoneColor: 0xffce,
+    lowlightColor: 0xffce,
+    baseColor: 0x000000,
+    blurFactor: 0.26,
+    speed: 0.80,
+    zoom: 0.40
   });
 }
 
