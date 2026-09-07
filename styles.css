@@ -309,19 +309,13 @@ button.active {
   aspect-ratio: 16 / 10;
   overflow: hidden;
 
-  background: rgba(255, 255, 255, 0.10);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(0, 0, 0, 0);
+  border: 1px solid var(--line);
   border-radius: 0.8rem;
 
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  box-shadow: none;
 
-  box-shadow: 0 0.5rem 1.4rem rgba(0, 0, 0, 0.32),
-              inset 0 0 0 1px rgba(255, 255, 255, 0.16);
-
-  transition: border-color 220ms ease,
-              box-shadow 220ms ease,
-              transform 220ms ease;
+  transition: border-color 220ms ease, transform 220ms ease;
 }
 
 .game-card:hover .thumb-wrap {
@@ -337,9 +331,9 @@ button.active {
   inset: 0;
   display: grid;
   place-items: center;
-  color: #fff;
+  color: white;
 
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0);
 
   padding: 1rem;
   font-family: "Trebuchet MS", "Segoe UI", ui-sans-serif, system-ui, sans-serif;
@@ -348,11 +342,7 @@ button.active {
   line-height: 1.1;
   text-align: center;
   text-wrap: balance;
-
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
 }
-
 .player-dialog {
   width: min(1180px, calc(100% - 1rem));
   height: min(820px, calc(100vh - 1rem));
