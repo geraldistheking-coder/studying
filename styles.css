@@ -445,3 +445,48 @@ body > *:not(#vanta-bg) {
   position: relative;
   z-index: 1;
 }
+
+.suggestions-page {
+  width: min(900px, calc(100% - 2rem));
+  margin: 2rem auto;
+}
+
+.suggestions-panel {
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 0.8rem;
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.25);
+}
+
+.suggestions-header {
+  margin-bottom: 1rem;
+}
+
+.suggestions-header h1 {
+  margin: 0;
+  color: white;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.suggestions-header p:last-child {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+.form-container {
+  overflow: hidden;
+  border-radius: 0.6rem;
+  background: white;
+}
+
+.form-container iframe {
+  display: block;
+  width: 100%;
+  min-height: 650px;
+  border: 0;
+}
