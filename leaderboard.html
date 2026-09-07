@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Leaderboard</title>
+
+  <link rel="icon" type="image/png" href="assets/favicon3.png">
+  <link rel="stylesheet" href="styles.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
+</head>
+
+<body>
+
+  <div id="vanta-bg"></div>
+
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="Home">
+      <img src="assets/newicon2.png" alt="">
+    </a>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html" class="nav-button">Gaming</a>
+      <a href="leaderboard.html" class="nav-button active">Leaderboard</a>
+      <a href="suggestions.html" class="nav-button">Suggestions</a>
+    </nav>
+  </header>
+
+  <main class="leaderboard-page">
+
+    <section class="leaderboard-header">
+      <p class="eyebrow">Competition</p>
+      <h1>🏆 Leaderboard</h1>
+      <p>
+        See who has the highest scores.
+      </p>
+    </section>
+
+    <section class="leaderboard-panel">
+
+      <label class="leaderboard-select">
+        <span>Select a game</span>
+
+        <select id="gameSelect">
+          <option value="geometry-dash">Geometry Dash</option>
+          <option value="subway-surfers">Subway Surfers</option>
+          <option value="basketball-stars">Basketball Stars</option>
+          <option value="moto-x3m">Moto X3M</option>
+        </select>
+      </label>
+
+      <div class="leaderboard-table">
+
+        <div class="leaderboard-row leaderboard-head">
+          <span>Rank</span>
+          <span>Player</span>
+          <span>Score</span>
+        </div>
+
+        <div id="leaderboardRows"></div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <script>
+    const leaderboards = {
+
+      "geometry-dash": [
+        ["Player1", 12450],
+        ["Player2", 10820],
+        ["Player3", 9775],
+        ["Player4", 8420],
+        ["Player5", 7310]
+      ],
+
+      "subway-surfers": [
+        ["Player1", 250000],
+        ["Player2", 187500],
+        ["Player3", 142300],
+        ["Player4", 98500],
+        ["Player5", 76200]
+      ],
+
+      "basketball-stars": [
+        ["Player1", 1250],
+        ["Player2", 1100],
+        ["Player3", 950],
+        ["Player4", 825],
+        ["Player5", 700]
+      ],
+
+      "moto-x3m": [
+        ["Player1", 5200],
+        ["Player2", 4800],
+        ["Player3", 4250],
+        ["Player4", 3900],
+        ["Player5", 3500]
+      ]
+
+    };
+
+    const gameSelect = document.querySelector("#gameSelect");
+    const leaderboardRows = document.querySelector("#leaderboardRows");
+
+    function renderLeaderboard() {
+      const scores = leaderboards[gameSelect.value];
+
+      leaderboardRows.innerHTML = "";
+
+      scores.forEach((player, index) => {
+
+        const row = document.createElement("div");
+        row.className = "leaderboard-row";
+
+        let rank;
+
+        if (index === 0) {
+          rank = "🥇";
+        } else if (index === 1) {
+          rank = "🥈";
+        } else if (index === 2) {
+          rank = "🥉";
+        } else {
+          rank = index + 1;
+        }
+
+        row.innerHTML = `
+          <span class="rank">${rank}</span>
+          <span class="player-name">${player[0]}</span>
+          <span class="player-score">${player[1].toLocaleString()}</span>
+        `;
+
+        leaderboardRows.appendChild(row);
+      });
+    }
+
+    gameSelect.addEventListener("change", renderLeaderboard);
+
+    function startFog() {
+      if (!window.VANTA?.FOG) return;
+
+      window.VANTA.FOG({
+        el: "#vanta-bg",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        highlightColor: 0xffce,
+        midtoneColor: 0xffce,
+        lowlightColor: 0xffce,
+        baseColor: 0x000000,
+        blurFactor: 0.26,
+        speed: 0.80,
+        zoom: 0.40
+      });
+    }
+
+    startFog();
+    renderLeaderboard();
+  </script>
+
+</body>
+</html>
