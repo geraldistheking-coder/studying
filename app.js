@@ -101,7 +101,6 @@ const games = [
 });
 const grid = document.querySelector("#gameGrid");
 const searchInput = document.querySelector("#searchInput");
-const categoryBar = document.querySelector("#categoryBar");
 const resultTitle = document.querySelector("#resultTitle");
 const resultCount = document.querySelector("#resultCount");
 const dialog = document.querySelector("#playerDialog");
@@ -111,41 +110,20 @@ const playerMeta = document.querySelector("#playerMeta");
 const closeButton = document.querySelector("#closeButton");
 const fullscreenButton = document.querySelector("#fullscreenButton");
 
-let activeCategory = "All";
-
-function categories() {
-  return ["All", ...new Set(games.map((game) => game.category).sort())];
-}
-
-function renderCategories() {
-  categoryBar.innerHTML = "";
-  categories().forEach((category) => {
-    const button = document.createElement("button");
-    button.type = "button";
-    button.textContent = category;
-    button.classList.toggle("active", category === activeCategory);
-    button.addEventListener("click", () => {
-      activeCategory = category;
-      render();
-    });
-    categoryBar.append(button);
-  });
-}
-
 function filteredGames() {
   const query = searchInput.value.trim().toLowerCase();
+
   return games.filter((game) => {
-    const matchesCategory = activeCategory === "All" || game.category === activeCategory;
-    const matchesQuery = `${game.title} ${game.category} ${game.slug}`.toLowerCase().includes(query);
-    return matchesCategory && matchesQuery;
+    return `${game.title} ${game.category} ${game.slug}`
+      .toLowerCase()
+      .includes(query);
   });
 }
 
 function render() {
-  renderCategories();
   const visible = filteredGames();
   grid.innerHTML = "";
-  resultTitle.textContent = activeCategory === "All" ? "All assignments" : activeCategory;
+  resultTitle.textContent = "All assignments";
   resultCount.textContent = `${visible.length} ${visible.length === 1 ? "assignment" : "assignments"}`;
 
   visible.forEach((game) => {
