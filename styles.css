@@ -490,3 +490,133 @@ body > *:not(#vanta-bg) {
   min-height: 650px;
   border: 0;
 }
+
+.leaderboard-page {
+  width: min(900px, calc(100% - 2rem));
+  margin: 2rem auto;
+}
+
+.leaderboard-header {
+  margin-bottom: 1.5rem;
+}
+
+.leaderboard-header h1 {
+  margin: 0;
+  color: white;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+}
+
+.leaderboard-header p:last-child {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+.leaderboard-panel {
+  padding: 1.5rem;
+
+  background: rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 0.8rem;
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.25);
+}
+
+.leaderboard-select {
+  display: grid;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+
+  color: white;
+  font-weight: 900;
+}
+
+.leaderboard-select select {
+  width: 100%;
+  padding: 0.8rem 0.9rem;
+
+  color: white;
+  background: rgba(0, 0, 0, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 0.45rem;
+
+  outline: none;
+  font-weight: 800;
+}
+
+.leaderboard-select select:focus {
+  border-color: var(--mint);
+}
+
+.leaderboard-select option {
+  color: #17354f;
+  background: #dcefff;
+}
+
+.leaderboard-table {
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 0.65rem;
+}
+
+.leaderboard-row {
+  display: grid;
+  grid-template-columns: 5rem 1fr 9rem;
+  align-items: center;
+
+  min-height: 3.5rem;
+  padding: 0 1rem;
+
+  color: white;
+  background: rgba(0, 0, 0, 0.08);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.leaderboard-row:last-child {
+  border-bottom: 0;
+}
+
+.leaderboard-head {
+  min-height: 2.8rem;
+
+  color: rgba(255, 255, 255, 0.7);
+  background: rgba(0, 0, 0, 0.18);
+
+  font-size: 0.75rem;
+  font-weight: 1000;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.rank {
+  font-weight: 900;
+}
+
+.player-name {
+  font-weight: 800;
+}
+
+.player-score {
+  text-align: right;
+  font-weight: 1000;
+}
+
+@media (max-width: 600px) {
+  .leaderboard-page {
+    width: min(100% - 1rem, 900px);
+    margin: 1rem auto;
+  }
+
+  .leaderboard-panel {
+    padding: 1rem;
+  }
+
+  .leaderboard-row {
+    grid-template-columns: 3.5rem 1fr 6rem;
+    padding: 0 0.7rem;
+  }
+}
