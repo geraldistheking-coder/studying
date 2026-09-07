@@ -63,7 +63,6 @@ button.active {
   z-index: 5;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 1rem;
   padding: 0.85rem clamp(1rem, 3vw, 2rem);
   background: rgba(0, 0, 0, 0);
@@ -71,6 +70,46 @@ button.active {
   backdrop-filter: blur(18px);
 }
 
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.nav-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.5rem;
+  padding: 0.65rem 1rem;
+
+  color: white;
+  background: rgba(0, 0, 0, 0);
+  border: 1px solid var(--line);
+  border-radius: 0.45rem;
+
+  text-decoration: none;
+  font-weight: 900;
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  transition: background 180ms ease,
+              border-color 180ms ease,
+              transform 180ms ease;
+}
+
+.nav-button:hover,
+.nav-button.active {
+  color: white;
+  background: rgba(0, 0, 0, 0.16);
+  border-color: rgba(255, 255, 255, 0.28);
+  transform: translateY(-1px);
+}
 .brand,
 .top-actions,
 .toolbar,
