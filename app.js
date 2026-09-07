@@ -73,6 +73,7 @@ const games = [
   ["Impossible Quiz", "impossiblequiz", "Puzzle"],
   ["Learn to Fly", "learntofly", "Arcade"],
   ["Minesweeper", "minesweeper", "Puzzle"],
+  ["MX Offroad Master", "games/mxoffroad/index.html", "Racing", null, "local"],
   ["Papa's Pizzeria", "papaspizzaria", "Sim"],
   ["Paper.io 2", "paperio2", "Arcade"],
   ["Plinko", "games/plinko/index.html", "Luck", null, "local"],
@@ -80,6 +81,8 @@ const games = [
   ["Riddle School", "riddleschool", "Story"],
   ["Saul Goodman Run", "games/saul-goodman-run/index.html", "Racing", null, "local"],
   ["Shift At Midnight", "games/shift-at-midnight/index.html", "Horror", null, "local"],
+  ["Vex X3M", "games/vexx3m/index.html", "Racing", null, "local"],
+  ["Vex X3M 2", "games/vexx3m2/index.html", "Racing", null, "local"],
   ["Wordle", "wordle", "Strategy"],
 ].map(([title, slug, imageOrCategory, category, source]) => {
   const isLocal = source === "local";
