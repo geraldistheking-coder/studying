@@ -301,11 +301,9 @@ button.active {
 }
 
 .game-card:hover {
-  background: rgba(255, 255, 255, 0.16);
-  border-color: rgba(255, 255, 255, 0.32);
-  box-shadow:
-    0 0.8rem 2rem rgba(0, 0, 0, 0.25),
-    0 0 1rem rgba(255, 255, 255, 0.08);
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
   transform: translateY(-6px) scale(1.025);
 }
 
