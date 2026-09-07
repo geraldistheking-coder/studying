@@ -1,19 +1,19 @@
 const gameCdnBase = "https://gl.githack.com/3kh0/3kh0-assets/raw/main/";
 const friendBase = "https://geodmeeee.github.io/forksnspoons/";
 const categoryColors = {
-  Action: "#e85d75",
-  Adventure: "#2a9d8f",
-  Arcade: "#f4a261",
-  Clicker: "#ec6ead",
-  Horror: "#013220",
-  Platform: "#3da5d9",
-  Puzzle: "#f6c945",
-  Racing: "#ff6b35",
-  Sim: "#4cc9a4",
-  Sports: "#457bff",
-  Story: "#b979df",
-  Strategy: "#22a6b3",
-  Luck: "#c49a4a"
+  Action: "#000000",
+  Adventure: "#000000",
+  Arcade: "#000000",
+  Clicker: "#000000",
+  Horror: "#000000",
+  Platform: "#000000",
+  Puzzle: "#000000",
+  Racing: "#000000",
+  Sim: "#000000",
+  Sports: "#000000",
+  Story: "#000000",
+  Strategy: "#000000",
+  Luck: "#000000"
 };
 
 const games = [
