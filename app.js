@@ -17,12 +17,19 @@ const categoryColors = {
 };
 
 const games = [
-  ["Vex 3", "games/vex3/index.html", "Platform", null, "local"]
-  ["Vex 4", "games/vex4/index.html", "Platform", null, "local"]
-  ["Vex 5", "games/vex5/index.html", "Platform", null, "local"]
-  ["Vex 6", "games/vex6/index.html", "Platform", null, "local"]
-  ["Vex 7", "games/vex7/index.html", "Platform", null, "local"]
-  ["Vex 8", "games/vex8/index.html", "Platform", null, "local"]
+  ["Russian Car Driver", "games/russiancar/index.html", "Racing", null, "local"],
+  ["Super Hot", "games/superhot/index.html", "Action", null, "local"],
+  ["Slope", "games/slope/index.html", "Platform", null, "local"],
+  ["Scary Shwarma", "games/scaryshwarma/index.html", "Horror", null, "local"],
+  ["Time Shooter 3", "games/timeshooter3/index.html", "Action", null, "local"],
+  ["Time Shooter 2", "games/timeshooter2/index.html", "Action", null, "local"],
+  ["Tag", "games/tag/index.html", "Platform", null, "local"],
+  ["Vex 3", "games/vex3/index.html", "Platform", null, "local"],
+  ["Vex 4", "games/vex4/index.html", "Platform", null, "local"],
+  ["Vex 5", "games/vex5/index.html", "Platform", null, "local"],
+  ["Vex 6", "games/vex6/index.html", "Platform", null, "local"],
+  ["Vex 7", "games/vex7/index.html", "Platform", null, "local"],
+  ["Vex 8", "games/vex8/index.html", "Platform", null, "local"],
   ["Wheelie Bike", "games/wheeliebike/index.html", "Racing", null, "local"],
   ["Basketball Stars", "games/basketballstars/index.html", "Sports", null, "local"],
   ["Basket Random", "games/basketrandom/index.html", "Sports", null, "local"],
