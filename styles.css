@@ -57,6 +57,7 @@ button.active {
   border-color: transparent;
 }
 
+```css
 .topbar {
   position: sticky;
   top: 0;
@@ -68,6 +69,20 @@ button.active {
   background: rgba(0, 0, 0, 0);
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+}
+
+.brand img {
+  width: 2.45rem;
+  height: 2.45rem;
+  display: block;
+  background: #fffaf2;
+  border-radius: 0.5rem;
 }
 
 .site-nav {
@@ -75,29 +90,25 @@ button.active {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
 }
+
 .nav-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   min-height: 2.5rem;
   padding: 0.65rem 1rem;
-
   color: white;
   background: rgba(0, 0, 0, 0);
   border: 1px solid var(--line);
   border-radius: 0.45rem;
-
   text-decoration: none;
   font-weight: 900;
-
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-
   transition: background 180ms ease,
               border-color 180ms ease,
               transform 180ms ease;
