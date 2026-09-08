@@ -20,7 +20,6 @@ const games = [
   ["Russian Car Driver", "games/russiancar/index.html", "Racing", null, "local"],
   ["Super Hot", "games/superhot/index.html", "Action", null, "local"],
   ["Slope", "games/slope/index.html", "Platform", null, "local"],
-  ["Scary Shwarma", "games/scaryshwarma/index.html", "Horror", null, "local"],
   ["Time Shooter 3", "games/timeshooter3/index.html", "Action", null, "local"],
   ["Time Shooter 2", "games/timeshooter2/index.html", "Action", null, "local"],
   ["Tag", "games/tag/index.html", "Platform", null, "local"],
