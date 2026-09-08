@@ -17,6 +17,7 @@ const categoryColors = {
 };
 
 const games = [
+  ["Wheelie Bike", "games/wheeliebike/index.html", "Racing", null, "local"],
   ["Basketball Stars", "games/basketballstars/index.html", "Sports", null, "local"],
   ["Basket Random", "games/basketrandom/index.html", "Sports", null, "local"],
   ["Boxing Random", "games/boxingrandom/index.html", "Sports", null, "local"],
