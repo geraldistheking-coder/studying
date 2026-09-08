@@ -17,6 +17,12 @@ const categoryColors = {
 };
 
 const games = [
+  ["Vex 3", "games/vex3/index.html", "Platform", null, "local"]
+  ["Vex 4", "games/vex4/index.html", "Platform", null, "local"]
+  ["Vex 5", "games/vex5/index.html", "Platform", null, "local"]
+  ["Vex 6", "games/vex6/index.html", "Platform", null, "local"]
+  ["Vex 7", "games/vex7/index.html", "Platform", null, "local"]
+  ["Vex 8", "games/vex8/index.html", "Platform", null, "local"]
   ["Wheelie Bike", "games/wheeliebike/index.html", "Racing", null, "local"],
   ["Basketball Stars", "games/basketballstars/index.html", "Sports", null, "local"],
   ["Basket Random", "games/basketrandom/index.html", "Sports", null, "local"],
