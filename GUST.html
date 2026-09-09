@@ -24,8 +24,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="description" content="GUST: A service worker -less web browser-in-a-browser" />
-    <title>GUST Browser</title>
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%239de5ff' d='M288 32c0 17.7 14.3 32 32 32h32c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32 14.3-32 32s14.3 32 32 32H352c53 0 96-43 96-96s-43-96-96-96H320c-17.7 0-32 14.3-32 32zm64 352c0 17.7 14.3 32 32 32h32c53 0 96-43 96-96s-43-96-96-96H32c-17.7 0-32 14.3-32 32s14.3 32 32 32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H384c-17.7 0-32 14.3-32 32zM128 512h32c53 0 96-43 96-96s-43-96-96-96H32c-17.7 0-32 14.3-32 32s14.3 32 32 32H160c17.7 0 32 14.3 32 32s-14.3 32-32 32H128c-17.7 0-32 14.3-32 32s14.3 32 32 32z'/%3E%3C/svg%3E" />
+    <title>Grades</title>
+    <link rel="icon" type="image/png" href="assets/favicon3.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
@@ -5753,101 +5753,86 @@
     </style>
 <style>
   .site-topbar {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    z-index: 999999 !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 999999 !important;
 
-    display: flex !important;
-    align-items: center !important;
-    gap: 1rem !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 1rem !important;
 
-    height: 64px !important;
-    padding: 0.85rem clamp(1rem, 3vw, 2rem) !important;
+  padding: 0.85rem clamp(1rem, 3vw, 2rem) !important;
 
-    background: rgba(0, 0, 0, 0) !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.18) !important;
+  /* SAME GLASS LOOK */
+  background: rgba(0, 0, 0, 0) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18) !important;
 
-    backdrop-filter: blur(18px) !important;
-    -webkit-backdrop-filter: blur(18px) !important;
+  backdrop-filter: blur(18px) !important;
+  -webkit-backdrop-filter: blur(18px) !important;
 
-    box-sizing: border-box !important;
-    font-family: Inter, ui-sans-serif, system-ui, -apple-system,
-      BlinkMacSystemFont, "Segoe UI", sans-serif !important;
-  }
+  box-sizing: border-box !important;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+}
 
-  .site-topbar-brand {
-    display: flex !important;
-    align-items: center !important;
+.site-topbar-brand {
+  display: flex !important;
+  align-items: center !important;
+  color: white !important;
+  text-decoration: none !important;
+  font-weight: 1000 !important;
+  white-space: nowrap !important;
+}
 
-    color: white !important;
-    text-decoration: none !important;
-    font-weight: 1000 !important;
-    white-space: nowrap !important;
-  }
+.site-topbar-nav {
+  position: absolute !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
 
-  .site-topbar-nav {
-    position: absolute !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.5rem !important;
+}
 
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 0.5rem !important;
-  }
+.site-topbar-button {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 
-  .site-topbar-button {
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
+  min-height: 2.5rem !important;
+  padding: 0.65rem 1rem !important;
 
-    min-height: 2.5rem !important;
-    padding: 0.65rem 1rem !important;
+  color: white !important;
 
-    color: white !important;
-    background: rgba(0, 0, 0, 0) !important;
+  /* TRANSPARENT GLASS */
+  background: rgba(0, 0, 0, 0) !important;
 
-    border: 1px solid rgba(255, 255, 255, 0.18) !important;
-    border-radius: 0.45rem !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  border-radius: 0.45rem !important;
 
-    text-decoration: none !important;
-    font-weight: 900 !important;
-    white-space: nowrap !important;
+  text-decoration: none !important;
+  font-weight: 900 !important;
+  white-space: nowrap !important;
 
-    backdrop-filter: blur(18px) !important;
-    -webkit-backdrop-filter: blur(18px) !important;
+  backdrop-filter: blur(18px) !important;
+  -webkit-backdrop-filter: blur(18px) !important;
 
-    transition:
-      background 180ms ease,
-      border-color 180ms ease,
-      transform 180ms ease !important;
-  }
+  transition:
+    background 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease !important;
+}
 
-  .site-topbar-button:hover,
-  .site-topbar-button.active {
-    color: white !important;
-    background: rgba(0, 0, 0, 0.16) !important;
-    border-color: rgba(255, 255, 255, 0.28) !important;
-    transform: translateY(-1px) !important;
-  }
-
-  @media (max-width: 700px) {
-    .site-topbar-nav {
-      position: static !important;
-      transform: none !important;
-      margin-left: auto !important;
-    }
-
-    .site-topbar-brand {
-      display: none !important;
-    }
-
-    .site-topbar {
-      justify-content: center !important;
-    }
-  }
+.site-topbar-button:hover,
+.site-topbar-button.active {
+  color: white !important;
+  background: rgba(0, 0, 0, 0.16) !important;
+  border-color: rgba(255, 255, 255, 0.28) !important;
+  transform: translateY(-1px) !important;
+}
 </style>
 
 </head>
@@ -28759,10 +28744,12 @@ _VIEWER_DL_JS +
     </div>
 
 <header class="site-topbar">
-  <a class="site-topbar-brand" href="index.html">Gaming</a>
+  <a class="site-topbar-brand" href="index.html">
+  <img src="assets/newicon2.png" alt="Assignments">
+</a>
 
   <nav class="site-topbar-nav" aria-label="Main navigation">
-    <a href="index.html" class="site-topbar-button">Gaming</a>
+    <a href="index.html" class="site-topbar-button">Assignments</a>
     <a href="gust.html" class="site-topbar-button active">Gust</a>
     <a href="suggestions.html" class="site-topbar-button">Suggestions</a>
   </nav>
